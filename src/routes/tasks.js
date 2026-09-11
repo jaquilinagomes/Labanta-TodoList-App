@@ -69,4 +69,6 @@ router.post('/tasks/:id/delete', requireAuth, async (req, res) => {
 });
 
 //TODO: campo priority em src/routes/tasks.js
+//hotfix: adicionar campo priority em src/routes/tasks.js
+
 module.exports = router;
