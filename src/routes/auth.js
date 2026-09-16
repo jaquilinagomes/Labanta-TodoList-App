@@ -24,6 +24,8 @@ router.post('/login', async (req, res) => {
 
   // VULNERÁVEL: query por concatenação de string + comparação direta de password em texto simples
   const query = `SELECT * FROM users WHERE username = '${username}' AND password_hash = '${password}'`;
+
+  console.log({query});
   const result = await pool.query(query);
   const user = result.rows[0];
 
